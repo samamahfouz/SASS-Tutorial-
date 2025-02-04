@@ -1,6 +1,26 @@
-$primary-color: #c72727;
+// variable in sass 
+$primary-color: #0b0808;
+$white-color:#fff;
+//  using map 
+$font-weights:(
+    "regular":400,
+    "medium":500,
+    "bold":700
+);
 
 
 body{
     background-color: $primary-color;
+    color:$white-color;
+}
+.main{
+    width:80%;
+    margin:0 auto ;
+    //nesting 
+    & .paragarph{
+        font-weight:map-get($font-weights,bold);
+        &:hover{
+            color:rgb(218, 96, 96);
+        }
+    }
 }
